@@ -22,7 +22,7 @@
 
 
 /* Responsive for mobile devices */
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 426px) {
     body {
         min-height: 100vh;
         background-color: var(--cream);
@@ -41,9 +41,8 @@
     }
 
     .card--image {
-        background: url("./images/image-product-mobile.jpg") no-repeat;
-        background-size: contain;
-        width: 100%;
+        background: url("./images/image-product-mobile.jpg") no-repeat center;
+        background-size: cover;
         min-width: 300px;
         min-height: 245px;
     }
@@ -145,7 +144,7 @@
 
     .card--image {
         background: url("./images/image-product-desktop.jpg") no-repeat;
-        max-height: 400px;
+        min-height: 400px;
         min-width: 265px;
         background-size: contain;
     }
