@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary color */
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral color */
+    --darkblue: hsl(212, 21%, 14%);
+    --darkgrayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--cream);
+    font-size: 14px;
+    color: var(--darkgrayish-blue);
+    position: relative;
+    font-family: montserrat;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    border-radius: 16px;
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    overflow: hidden;
+}
+
+.card--image img {
+
+    max-height: 400px;
+    background-size: contain;
+}
+
+.card--content {
+    background-color: var(--white);
+    padding: 30px;
+    max-width: 280px;
+}
+
+.card--content>* {
+    margin-top: 16px;
+}
+
+.card--content .header {
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.card--content .title {
+    font-family: Fraunces;
+    color: var(--darkblue);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 35px;
+}
+
+
+.card--content .subTitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.card--content .price {
+    display: flex;
+    align-items: center;
+}
+
+.card--content .salePrice {
+    color: var(--darkcyan);
+    font-family: Fraunces;
+    font-size: 25px;
+}
+
+.card--content .fullPrice {
+    margin-left: 15px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.card--content .addCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--darkcyan);
+    border-radius: 12px;
+    padding: 12px 0;
+}
+
+
+.card--content .addCart-icon {
+    color: var(--white);
+    margin-right: 10px;
+}
+
+.card--content .addCart-btn {
+    font-size: 12px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 700;
+}
