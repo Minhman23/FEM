@@ -9,8 +9,11 @@
 }
 
 body {
+    background-color: var(--mainBG);
     font-family: 'Outfit';
     font-size: 18px;
+    min-height: 100vh;
+    margin: 2.5% 0;
 }
 
 :root {
@@ -21,5 +24,25 @@ body {
     /* Neutral */
     --mainBG: hsl(217, 54%, 11%);
     --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 25%;
+    margin: 0 auto;
+    background-color: var(--cardBG);
+    padding: 2%;
+    border-radius: 32px;
+}
+
+.card--image img {
+    border-radius: 16px;
+    width: 100%;
 }
