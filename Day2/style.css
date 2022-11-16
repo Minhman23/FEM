@@ -42,7 +42,142 @@ body {
     border-radius: 32px;
 }
 
+.card--image {
+    position: relative;
+}
+
 .card--image img {
+    /* overflow: hidden; */
     border-radius: 16px;
     width: 100%;
+    display: block;
+}
+
+.card--image:hover .card--imageOverlay {
+    display: block;
+}
+
+.card--imageOverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.card--imageOverlay img {
+    /* display: none; */
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card--content {
+    margin: 5% 0;
+}
+
+.card--content img {
+    display: flex;
+    align-self: center;
+}
+
+.title {
+    color: var(--white);
+    display: inline;
+    font-size: 24px;
+    transition: color ease-in-out 0.4s;
+}
+
+.title:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.text {
+    margin-top: 4%;
+    font-size: 18px;
+    color: var(--softBlue);
+}
+
+.sub--content {
+    display: flex;
+    margin-top: 8%;
+    padding-bottom: 6%;
+    border-bottom: 1px solid var(--line);
+}
+
+.sub--content .ethPrice {
+    font-size: 16px;
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    flex: 50%;
+}
+
+.ethPrice span {
+    margin-left: 5%;
+}
+
+.sub--content .timeLeft {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    flex: 50%;
+    flex-flow: row-reverse;
+}
+
+.timeLeft span {
+    color: var(--softBlue);
+    margin-left: 5%;
+    font-size: 16px;
+}
+
+.card--footer {
+    display: flex;
+    align-items: center;
+}
+
+.card--footer .avatar img {
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    width: 32px;
+    height: auto;
+    padding: 1px;
+}
+
+.card--footer .copyR {
+    font-size: 16px;
+    margin-left: 5%;
+    color: var(--softBlue);
+}
+
+.card--footer .highlightName {
+    color: var(--white);
+}
+
+.card--footer .highlightName:hover {
+    color: var(--cyan);
+    transition: color ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 426px) {
+    .card {
+        width: 90%;
+        padding: 6%;
+    }
+
+    .card--image img {
+        border-radius: 24px;
+    }
 }
