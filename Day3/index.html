@@ -8,39 +8,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="light-theme">
   <div class="container">
     <header>
-      <div class="bigTitle">
-        <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
-      </div>
-      <div class="toggleBtn">
-        <p>Dark Mode</p>
-        <label class="switch">
-          <input type="checkbox" checked>
-          <span class="slider round"></span>
-        </label>
+      <h1>Social Media Dashboard</h1>
+      <div class="header-text">Total Followers: 23,004</div>
+      <div class="hr"></div>
+      <div class="switcherBar">
+        <div class="header-text">Dark Mode</div>
+        <div class="switcher">
+          <div class="ball"></div>
+        </div>
       </div>
     </header>
-    <div class="mainCard">
-      <div class="card--facebook">
-        <div class="socialId">
-          <img src="images/icon-facebook.svg"></img>
-          <p class="socialId">@nathanf</p>
-        </div>
-        <div class="follower">
-          <h2>1987</h2>
-          <p>Followers</p>
-        </div>
-        <div class="rank">
-          <i class="fa-solid fa-caret-up"></i>
-          <p>12 Today</p>
+    <div class="wrapper">
+      <div class="card">
+        <div class="card-header facebook"></div>
+        <div class="card-body">
+          <div class="h-box">
+            <img src="images/icon-facebook.svg"></img>
+            <p class="socialId">@nathanf</p>
+          </div>
+          <div class="v-box">
+            <div class="followers-count">1987</div>
+            <div class="followers-text">Followers</div>
+          </div>
+          <div class="h-box">
+            <img src="./images/icon-up.svg"></img>
+            <div class="daily-changes plus">12 Today</div>
+          </div>
         </div>
       </div>
+
       <div class="card--twitter">
         <div class="socialId">
           <img src="images/icon-twitter.svg"></img>
@@ -84,7 +86,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 
     <h1 class="title">Overview - Today</h1>
     <div class="overviewCard">
       <div class="card">
@@ -166,9 +168,8 @@
           <h2>87</h2>
           <p><i class="fa-solid fa-caret-up"></i>3%</p>
         </div>
-      </div>
+      </div> -->
 
-    </div>
   </div>
 
 
@@ -199,6 +200,30 @@
   Total Views
   1407
   12%
+  <script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+    const toggle = $(".switcher");
+    const body = $("body");
+
+    toggle.addEventListener('click', toggleTheme);
+
+    function toggleTheme() {
+      if (body.className === 'dark-theme') {
+        setTheme('light-theme')
+        toggle.classList.remove('dark');
+      } else {
+        setTheme('dark-theme');
+        toggle.classList.add('dark');
+      }
+    }
+
+    function setTheme(themeName) {
+      body.className = themeName;
+    }
+
+  </script>
 </body>
 
 </html>
