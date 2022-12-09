@@ -80,5 +80,110 @@ body {
   background-color: var(--toggle);
 }
 .container .wrapper {
-  border: 1px solid #000;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+}
+.container .wrapper .card {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+.container .wrapper .card .card-header {
+  height: 4px;
+}
+.container .wrapper .card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.8rem 0;
+}
+.container .wrapper .card .card-body .h-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container .wrapper .card .card-body .v-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 2.5rem 0;
+}
+.container .wrapper .card .card-body .socialId {
+  color: var(--text-1);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 0.8rem;
+}
+.container .wrapper .card .card-body .followers-count {
+  font-weight: 700;
+  font-size: 5.4rem;
+  color: var(--text-2);
+}
+.container .wrapper .card .card-body .followers-text {
+  font-size: 1.2rem;
+  color: var(--text-1);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.container .wrapper .card .card-body .daily-changes {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 0.2rem;
+}
+.container .wrapper .card .facebook {
+  background-color: hsl(208deg, 92%, 53%);
+}
+.container .wrapper .card .twitter {
+  background-color: hsl(203deg, 89%, 53%);
+}
+.container .wrapper .card .instagram {
+  background-image: linear-gradient(45deg, hsl(37deg, 97%, 70%), hsl(329deg, 70%, 58%));
+}
+.container .wrapper .card .youtube {
+  background-color: hsl(348deg, 97%, 39%);
+}
+.container .wrapper .card .plus {
+  color: hsl(163deg, 72%, 41%);
+}
+.container .wrapper .card .minus {
+  color: hsl(356deg, 69%, 56%);
+}
+.container .overview {
+  font-size: 2.4rem;
+  color: var(--text-1);
+  font-weight: 700;
+  margin-top: 4.4rem;
+}
+.container .wrapper-daily {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.65rem;
+}
+.container .wrapper-daily .card {
+  background-color: var(--card-bg);
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+}
+.container .wrapper-daily .card .v-box {
+  display: flex;
+  flex-direction: row;
+}
+.container .wrapper-daily .card .bottom {
+  display: flex;
+}
+
+@media screen and (max-width: 1440) {
+  .wrapper {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style.css.map */
