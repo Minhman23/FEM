@@ -2,7 +2,7 @@
     width: 87%;
     min-height: 100vh;
     margin: 6% auto;
-    border: 1px solid pink; // temporary
+    // border: 1px solid pink; // temporary
 
     header {
         h1 {
@@ -37,6 +37,11 @@
                 align-items: center;
                 justify-content: flex-end;
                 border-radius: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-image: var(--toggle-hover);
+                }
 
                 .ball {
                     width: 1.8rem;
@@ -67,6 +72,7 @@
             border-radius: 0.5rem;
             overflow: hidden;
             width: 100%;
+            cursor: pointer;
 
             .card-header {
                 height: 4px;
@@ -79,6 +85,10 @@
                 align-items: center;
                 justify-content: flex-start;
                 padding: 2.8rem 0;
+
+                &:hover {
+                    background-color: var(--bg-hover);
+                }
 
                 .h-box {
                     display: flex;
@@ -159,24 +169,79 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: center;
         margin-top: 2.65rem;
-        // gap: 1rem;
+        justify-content: center;
+        gap: 1.8rem;
 
         .card {
             background-color: var(--card-bg);
-            display: flex;
-            padding: 2rem;
+            padding: 2.6rem 3rem 2.6rem 2rem;
+            border-radius: .5rem;
             width: 100%;
-            
-            .v-box {
-                display: flex;
-                flex-direction: row;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bg-hover);
             }
 
-            .bottom {
+            .v-box {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .h-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .title {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--text-1);
+                }
+            }
+
+            .h-box-2 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+
+                .value {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: var(--text-2);
+                }
+            }
+
+            .h-box-3 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: .5rem;
+
+                .daily-changes {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: .5rem;
+                }
+            }
+
+            .plus {
+                color: $lime-green;
+            }
+
+            .minus {
+                color: $bright-red;
             }
         }
+
     }
 }

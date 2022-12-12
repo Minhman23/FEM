@@ -14,8 +14,10 @@
 <body class="light-theme">
   <div class="container">
     <header>
-      <h1>Social Media Dashboard</h1>
-      <div class="header-text">Total Followers: 23,004</div>
+      <div>
+        <h1>Social Media Dashboard</h1>
+        <div class="header-text">Total Followers: 23,004</div>
+      </div>
       <div class="hr"></div>
       <div class="switcherBar">
         <div class="header-text">Dark Mode</div>
@@ -96,72 +98,184 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- End of Wrapper -->
 
     <div class="overview">Overview - Today</div>
     <div class="wrapper-daily">
+      <!-- facebook -->
       <div class="card">
         <div class="v-box">
           <div class="h-box">
             <div class="title">Page Views</div>
             <img src="images/icon-facebook.svg" alt="fb">
           </div>
-        </div>
 
-        <div class="h-box-2">
-          <div class="value">87</div>
-          <div class="h-box-3">
-            <img src="images/icon-up.svg" alt="icon up">
-            <div class="daily-changes plus">3%</div>
+          <div class="h-box-2">
+            <div class="value">87</div>
+            <div class="h-box-3">
+              <img src="images/icon-up.svg" alt="icon up">
+              <div class="daily-changes plus">3%</div>
+            </div>
           </div>
         </div>
       </div>
 
+      <!-- facebook -->
       <div class="card">
         <div class="v-box">
           <div class="h-box">
-            <div class="title">Page Views</div>
+            <div class="title">Likes</div>
             <img src="images/icon-facebook.svg" alt="fb">
           </div>
-        </div>
 
-        <div class="h-box-2">
-          <div class="value">87</div>
-          <div class="h-box-3">
-            <img src="images/icon-up.svg" alt="icon up">
-            <div class="daily-changes plus">3%</div>
+          <div class="h-box-2">
+            <div class="value">52</div>
+            <div class="h-box-3">
+              <img src="images/icon-down.svg" alt="icon down">
+              <div class="daily-changes minus">2%</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- instagram -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Likes</div>
+            <img src="images/icon-instagram.svg" alt="instagram">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">5462</div>
+            <div class="h-box-3">
+              <img src="images/icon-up.svg" alt="icon up">
+              <div class="daily-changes plus">2257%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- instagram -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Profile Views</div>
+            <img src="images/icon-instagram.svg" alt="instagram">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">52K</div>
+            <div class="h-box-3">
+              <img src="images/icon-up.svg" alt="icon up">
+              <div class="daily-changes plus">1375%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- twitter -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Retweets</div>
+            <img src="images/icon-twitter.svg" alt="twitter">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">117</div>
+            <div class="h-box-3">
+              <img src="images/icon-up.svg" alt="icon up">
+              <div class="daily-changes plus">303%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- twitter -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Likes</div>
+            <img src="images/icon-twitter.svg" alt="twitter">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">507</div>
+            <div class="h-box-3">
+              <img src="images/icon-up.svg" alt="icon up">
+              <div class="daily-changes plus">553%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- youtube -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Likes</div>
+            <img src="images/icon-youtube.svg" alt="youtube">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">107</div>
+            <div class="h-box-3">
+              <img src="images/icon-down.svg" alt="icon down">
+              <div class="daily-changes minus">19%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- youtube -->
+      <div class="card">
+        <div class="v-box">
+          <div class="h-box">
+            <div class="title">Total Views</div>
+            <img src="images/icon-youtube.svg" alt="youtube">
+          </div>
+
+          <div class="h-box-2">
+            <div class="value">1407</div>
+            <div class="h-box-3">
+              <img src="images/icon-down.svg" alt="icon down">
+              <div class="daily-changes minus">12%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End of Wrapper daily -->
+  </div> <!-- End of container -->
 
 
 
 
-    <script>
-      const $ = document.querySelector.bind(document);
-      const $$ = document.querySelectorAll.bind(document);
+  <script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
 
-      const toggle = $(".switcher");
-      const body = $("body");
+    const toggle = $(".switcher");
+    const body = $("body");
 
-      toggle.addEventListener('click', toggleTheme);
+    toggle.addEventListener('click', toggleTheme);
 
-      function toggleTheme() {
-        if (body.className === 'dark-theme') {
-          setTheme('light-theme')
-          toggle.classList.remove('dark');
-        } else {
-          setTheme('dark-theme');
-          toggle.classList.add('dark');
-        }
+    function toggleTheme() {
+      if (body.className === 'dark-theme') {
+        setTheme('light-theme')
+        toggle.classList.remove('dark');
+      } else {
+        setTheme('dark-theme');
+        toggle.classList.add('dark');
       }
+    }
 
-      function setTheme(themeName) {
-        body.className = themeName;
-      }
+    function setTheme(themeName) {
+      body.className = themeName;
+    }
 
-    </script>
+  </script>
 </body>
 
 </html>

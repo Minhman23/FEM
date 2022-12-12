@@ -1,0 +1,45 @@
+@media screen and (min-width:767px) and (max-width:1439px) {
+    .container {
+        width: 85%;
+        margin: 4% auto;
+
+        header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .hr {
+                display: none;
+            }
+
+            .switcher {
+                margin-left: 1.5rem;
+            }
+        }
+
+        .wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .card {
+                flex: 1 48.25%;
+            }
+
+        }
+
+        .wrapper-daily {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2.9rem;
+
+            .card {
+                flex: 1 47.75%;
+            }
+        }
+    }
+}

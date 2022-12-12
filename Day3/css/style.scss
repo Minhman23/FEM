@@ -13,20 +13,25 @@ $youtube: hsl(348, 97%, 39%);
 :root {
     .dark-theme {
         --toggle: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+        --toggle-hover: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
         --bg: hsl(230, 17%, 14%);
         --top-bg: hsl(232, 19%, 15%);
         --card-bg: hsl(228, 28%, 20%);
         --text-1: hsl(228, 34%, 66%);
         --text-2: hsl(0, 0%, 100%);
+        --bg-hover: #333a56;
     }
 
     .light-theme {
         --toggle: linear-gradient(0deg, hsl(230, 22%, 74%), hsl(230, 22%, 74%));
+        --toggle-hover: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
         --bg: hsl(0, 0%, 100%);
         --top-bg: hsl(225, 100%, 98%);
         --card-bg: hsl(227, 47%, 96%);
         --text-1: hsl(228, 12%, 44%);
         --text-2: hsl(230, 17%, 14%);
+        --bg-hover: #e1e3f0;
+
     }
 }
 
@@ -34,4 +39,5 @@ $youtube: hsl(348, 97%, 39%);
 
 @import "general";
 @import "dashboard";
-@import "media-query1440"
+@import "media-1440";
+@import "media-768";

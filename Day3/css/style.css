@@ -1,19 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 :root .dark-theme {
   --toggle: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --toggle-hover: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --bg: hsl(230, 17%, 14%);
   --top-bg: hsl(232, 19%, 15%);
   --card-bg: hsl(228, 28%, 20%);
   --text-1: hsl(228, 34%, 66%);
   --text-2: hsl(0, 0%, 100%);
+  --bg-hover: #333a56;
 }
 :root .light-theme {
   --toggle: linear-gradient(0deg, hsl(230, 22%, 74%), hsl(230, 22%, 74%));
+  --toggle-hover: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
   --bg: hsl(0, 0%, 100%);
   --top-bg: hsl(225, 100%, 98%);
   --card-bg: hsl(227, 47%, 96%);
   --text-1: hsl(228, 12%, 44%);
   --text-2: hsl(230, 17%, 14%);
+  --bg-hover: #e1e3f0;
 }
 
 *,
@@ -37,7 +41,6 @@ body {
   width: 87%;
   min-height: 100vh;
   margin: 6% auto;
-  border: 1px solid pink;
 }
 .container header h1 {
   font-size: 2.4rem;
@@ -68,6 +71,10 @@ body {
   align-items: center;
   justify-content: flex-end;
   border-radius: 2rem;
+  cursor: pointer;
+}
+.container header .switcherBar .switcher:hover {
+  background-image: var(--toggle-hover);
 }
 .container header .switcherBar .switcher .ball {
   width: 1.8rem;
@@ -92,6 +99,7 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
   width: 100%;
+  cursor: pointer;
 }
 .container .wrapper .card .card-header {
   height: 4px;
@@ -102,6 +110,9 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 2.8rem 0;
+}
+.container .wrapper .card .card-body:hover {
+  background-color: var(--bg-hover);
 }
 .container .wrapper .card .card-body .h-box {
   display: flex;
@@ -167,23 +178,134 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 2.65rem;
+  justify-content: center;
+  gap: 1.8rem;
 }
 .container .wrapper-daily .card {
   background-color: var(--card-bg);
-  display: flex;
-  padding: 2rem;
+  padding: 2.6rem 3rem 2.6rem 2rem;
+  border-radius: 0.5rem;
   width: 100%;
+  cursor: pointer;
+}
+.container .wrapper-daily .card:hover {
+  background-color: var(--bg-hover);
 }
 .container .wrapper-daily .card .v-box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
-.container .wrapper-daily .card .bottom {
+.container .wrapper-daily .card .h-box {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .wrapper-daily .card .h-box .title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+.container .wrapper-daily .card .h-box-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .wrapper-daily .card .h-box-2 .value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.container .wrapper-daily .card .h-box-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+.container .wrapper-daily .card .h-box-3 .daily-changes {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+.container .wrapper-daily .card .plus {
+  color: hsl(163deg, 72%, 41%);
+}
+.container .wrapper-daily .card .minus {
+  color: hsl(356deg, 69%, 56%);
 }
 
-@media screen and (max-width: 1440) {
-  .wrapper {
+@media screen and (min-width: 1439px) {
+  .container {
+    width: 77%;
+    margin: 1.8% auto;
+  }
+  .container header {
+    display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container header h1 {
+    font-size: 2.8rem;
+  }
+  .container header .hr {
+    display: none;
+  }
+  .container header .switcher {
+    margin-left: 1.5rem;
+  }
+  .container .wrapper {
+    flex-direction: row;
+  }
+  .container .wrapper-daily {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.9rem;
+  }
+  .container .wrapper-daily .card {
+    flex: 1 23%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1439px) {
+  .container {
+    width: 85%;
+    margin: 4% auto;
+  }
+  .container header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container header h1 {
+    font-size: 2.8rem;
+  }
+  .container header .hr {
+    display: none;
+  }
+  .container header .switcher {
+    margin-left: 1.5rem;
+  }
+  .container .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container .wrapper .card {
+    flex: 1 48.25%;
+  }
+  .container .wrapper-daily {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.9rem;
+  }
+  .container .wrapper-daily .card {
+    flex: 1 47.75%;
   }
 }/*# sourceMappingURL=style.css.map */
