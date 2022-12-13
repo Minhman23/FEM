@@ -1,0 +1,19 @@
+:root {
+  --linear-bg: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --light-text-1: hsl(240, 78%, 98%);
+  --light-text-2: hsl(234, 14%, 74%);
+  --dark-text-1: hsl(233, 13%, 49%);
+  --dark-text-2: hsl(232, 13%, 33%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}/*# sourceMappingURL=style.css.map */

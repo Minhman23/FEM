@@ -1,0 +1,15 @@
+// Global variables
+
+
+:root {
+    --linear-bg: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --light-text-1: hsl(240, 78%, 98%);
+    --light-text-2: hsl(234, 14%, 74%);
+    --dark-text-1: hsl(233, 13%, 49%);
+    --dark-text-2: hsl(232, 13%, 33%);
+}
+
+
+
+@import "general";
+@import "dashboard";
