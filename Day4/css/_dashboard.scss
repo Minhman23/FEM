@@ -1,0 +1,126 @@
+.container {
+    min-height: 100vh;
+    text-align: center;
+    margin: 3% auto;
+    width: 88%;
+    border: 1px solid pink; //temporary
+
+    header {
+        margin: 5rem 0 8rem 0;
+
+        .title {
+            color: var(--dark-text-2);
+            font-size: 3.2rem;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 4rem;
+
+            .switcher {
+                padding: 4px;
+                min-width: 5.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                border-radius: 2rem;
+                cursor: pointer;
+                background-image: var(--linear-bg);
+                margin: 0 2.5rem;
+
+                .ball {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background-color: #fff;
+                    border-radius: 3rem;
+                }
+
+                &.true {
+                    justify-content: flex-start;
+                }
+            }
+
+            .annual,
+            .month {
+                color: var(--light-text-2);
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.2rem;
+
+        .card:nth-child(2) {
+            background-image: var(--linear-bg);
+
+            .price-month,
+            .price-year,
+            .label,
+            .detail {
+                color: var(--light-text-1);
+            }
+
+            span {
+                font-size: 4rem;
+            }
+
+            .btn-more {
+                background-image: var(--white);
+                color: hsl(237, 63%, 64%);
+            }
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            width: 100%;
+            height: 45rem;
+            border-radius: 1rem;
+            padding: 3.7rem 3rem;
+
+            .price-month,
+            .price-year {
+                color: var(--dark-text-1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 2.2rem 0 2.3rem 0;
+                font-size: 6.9rem;
+
+                span {
+                    font-size: 4rem;
+                }
+
+                &.hide {
+                    display: none;
+                }
+            }
+
+            .detail {
+                margin: 1.7rem 0;
+            }
+
+            .btn-more {
+                margin-top: 3rem;
+                padding: 1.3rem 0;
+                background-image: var(--linear-bg);
+                color: var(--light-text-1);
+                border-radius: 0.7rem;
+            }
+
+            .line {
+                height: 0.05rem;
+                width: 100%;
+                background-color: var(--light-text-2)
+            }
+        }
+    }
+}
