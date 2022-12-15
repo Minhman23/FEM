@@ -40,7 +40,14 @@
                 &.true {
                     justify-content: flex-start;
                 }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
             }
+
+
 
             .annual,
             .month {
@@ -75,6 +82,14 @@
             .btn-more {
                 background-image: var(--white);
                 color: hsl(237, 63%, 64%);
+
+                &:hover {
+                    cursor: pointer;
+                    background-image: var(--linear-bg);
+                    border: 1px solid #fff;
+                    outline: #fff;
+                    color: #fff;
+                }
             }
         }
 
@@ -114,6 +129,12 @@
                 background-image: var(--linear-bg);
                 color: var(--light-text-1);
                 border-radius: 0.7rem;
+
+                &:hover {
+                    background-image: var(--white);
+                    color: hsl(236, 72%, 79%);
+                    border: 1px solid var(--dark-text-2);
+                }
             }
 
             .line {

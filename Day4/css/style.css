@@ -70,6 +70,10 @@ body {
 .container header .option .switcher.true {
   justify-content: flex-start;
 }
+.container header .option .switcher:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
 .container header .option .annual,
 .container header .option .month {
   color: var(--light-text-2);
@@ -97,6 +101,13 @@ body {
 .container .wrapper .card:nth-child(2) .btn-more {
   background-image: var(--white);
   color: hsl(237deg, 63%, 64%);
+}
+.container .wrapper .card:nth-child(2) .btn-more:hover {
+  cursor: pointer;
+  background-image: var(--linear-bg);
+  border: 1px solid #fff;
+  outline: #fff;
+  color: #fff;
 }
 .container .wrapper .card {
   background-color: #fff;
@@ -133,6 +144,11 @@ body {
   color: var(--light-text-1);
   border-radius: 0.7rem;
 }
+.container .wrapper .card .btn-more:hover {
+  background-image: var(--white);
+  color: hsl(236deg, 72%, 79%);
+  border: 1px solid var(--dark-text-2);
+}
 .container .wrapper .card .line {
   height: 0.05rem;
   width: 100%;
@@ -161,6 +177,6 @@ body {
     height: 50rem;
   }
   .container .wrapper .card:nth-child(2) .label {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
