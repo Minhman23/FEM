@@ -12,12 +12,11 @@ html {
 
 body {
     background-image: url(../images/bg-top.svg);
-    background-position-x: 20.7rem;
-    background-position-y: -3.7rem;
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: 103%;
     background-color: var(--light-text-1);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: var(--dark-text-2);
+    background-position: 18.8rem -3.8rem;
     font-size: 1.6rem;
 }

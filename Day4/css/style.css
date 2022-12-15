@@ -22,22 +22,20 @@ html {
 
 body {
   background-image: url(../images/bg-top.svg);
-  background-position-x: 20.7rem;
-  background-position-y: -3.7rem;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: 103%;
   background-color: var(--light-text-1);
   font-family: "Montserrat", sans-serif;
   color: var(--dark-text-2);
+  background-position: 18.8rem -3.8rem;
   font-size: 1.6rem;
 }
 
 .container {
   min-height: 100vh;
   text-align: center;
-  margin: 3% auto;
+  margin: 16% auto 4%;
   width: 88%;
-  border: 1px solid pink;
 }
 .container header {
   margin: 5rem 0 8rem 0;
@@ -139,4 +137,30 @@ body {
   height: 0.05rem;
   width: 100%;
   background-color: var(--light-text-2);
+}
+
+@media screen and (min-width: 1439px) {
+  body {
+    background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 100%, 100% 0%;
+    background-size: 26%;
+  }
+  .container {
+    margin: 5% auto;
+    width: 73%;
+  }
+  .container header {
+    margin: 5rem 0 6.5rem 0;
+  }
+  .container .wrapper {
+    flex-direction: row;
+    gap: unset;
+  }
+  .container .wrapper .card:nth-child(2) {
+    height: 50rem;
+  }
+  .container .wrapper .card:nth-child(2) .label {
+    margin-top: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

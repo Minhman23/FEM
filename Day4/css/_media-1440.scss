@@ -1,0 +1,30 @@
+@media screen and (min-width:1439px) {
+    body {
+        background-image: url(../images/bg-bottom.svg), url(../images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-position: 0% 100%, 100% 0%;
+        background-size: 26%;
+    }
+
+    .container {
+        margin: 5% auto;
+        width: 73%;
+
+        header {
+            margin: 5rem 0 6.5rem 0;
+        }
+
+        .wrapper {
+            flex-direction: row;
+            gap: unset;
+
+            .card:nth-child(2) {
+                height: 50rem;
+
+                .label {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
