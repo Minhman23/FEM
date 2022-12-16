@@ -1,0 +1,247 @@
+.container {
+    width: 87%;
+    min-height: 100vh;
+    margin: 6% auto;
+    // border: 1px solid pink; // temporary
+
+    header {
+        h1 {
+            font-size: 2.4rem;
+            padding: 1rem 0 0.4rem 0;
+            color: var(--text-2);
+        }
+
+        .header-text {
+            color: var(--text-1);
+            font-weight: 700;
+            font-size: 1.43rem;
+        }
+
+        .hr {
+            width: 100%;
+            height: 1px;
+            background-color: var(--text-1);
+            margin: 2.4rem 0 1.68rem 0;
+        }
+
+        .switcherBar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .switcher {
+                background-image: var(--toggle);
+                padding: 3px;
+                min-width: 4.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                border-radius: 2rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-image: var(--toggle-hover);
+                }
+
+                .ball {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    background-color: var(--bg);
+                    border-radius: 1rem;
+                }
+            }
+
+            .dark {
+                justify-content: flex-start;
+                background-color: var(--toggle);
+            }
+        }
+    }
+
+    .wrapper {
+        // border: 1px solid #000; //temporary
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.2rem;
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 0.5rem;
+            overflow: hidden;
+            width: 100%;
+            cursor: pointer;
+
+            .card-header {
+                height: 4px;
+            }
+
+            .card-body {
+                // border: 1px solid #000; //temporary
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 2.8rem 0;
+
+                &:hover {
+                    background-color: var(--bg-hover);
+                }
+
+                .h-box {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .v-box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2rem 0 2.5rem 0;
+                }
+
+                .socialId {
+                    color: var(--text-1);
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: 0.8rem;
+                }
+
+                .followers-count {
+                    font-weight: 700;
+                    font-size: 5.4rem;
+                    color: var(--text-2);
+                }
+
+                .followers-text {
+                    font-size: 1.2rem;
+                    color: var(--text-1);
+                    text-transform: uppercase;
+                    letter-spacing: .5rem;
+                }
+
+                .daily-changes {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    margin-left: .2rem;
+                }
+            }
+
+            .facebook {
+                background-color: $facebook;
+            }
+
+            .twitter {
+                background-color: $twitter;
+            }
+
+            .instagram {
+                background-image: $instagram;
+            }
+
+            .youtube {
+                background-color: $youtube;
+            }
+
+            .plus {
+                color: $lime-green;
+            }
+
+            .minus {
+                color: $bright-red;
+            }
+        }
+    }
+
+    .overview {
+        font-size: 2.4rem;
+        color: var(--text-1);
+        font-weight: 700;
+        margin-top: 4.4rem;
+    }
+
+    .wrapper-daily {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2.65rem;
+        justify-content: center;
+        gap: 1.8rem;
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.6rem 3rem 2.6rem 2rem;
+            border-radius: .5rem;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bg-hover);
+            }
+
+            .v-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .h-box {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .title {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: var(--text-1);
+                }
+            }
+
+            .h-box-2 {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                width: 100%;
+
+                .value {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: var(--text-2);
+                }
+            }
+
+            .h-box-3 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: .5rem;
+
+                .daily-changes {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: .5rem;
+                }
+            }
+
+            .plus {
+                color: $lime-green;
+            }
+
+            .minus {
+                color: $bright-red;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-size: 103%;
+    background-color: var(--light-text-1);
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-text-2);
+    background-position: 18.8rem -3.8rem;
+    font-size: 1.6rem;
+}

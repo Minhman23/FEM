@@ -1,0 +1,178 @@
+.container {
+    min-height: 100vh;
+    margin: 0 auto 5%;
+    width: 77.5%;
+    // border: 1px solid pink; //temporary
+
+    header {
+        // border: 1px solid red; //temporary
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.7rem 0.23rem 2.6rem;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            ul {
+                padding-left: 2.9rem;
+
+                li {
+                    color: var(--text-2);
+                    padding-left: 2.6rem;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .avt {
+                width: 5rem;
+            }
+
+            .cart {
+                padding-right: 4.6rem;
+            }
+        }
+    }
+
+    .line {
+        margin-top: 1rem;
+        height: .05rem;
+        background-color: var(--text-3);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 9rem;
+        padding: 0 4.8rem;
+
+        .image {
+            width: 100%;
+            // border: 1px solid blue;
+
+            .image-main {
+                width: 100%;
+                border-radius: 1.5rem;
+            }
+
+            .image-sub {
+                display: flex;
+                gap: 3.2rem;
+                justify-content: space-between;
+
+                .focus {
+                    outline: var(--orange) solid .3rem;
+                    opacity: .4;
+                }
+
+                img {
+                    margin-top: 2.6rem;
+                    width: 8.8rem;
+                    border-radius: 1.2rem;
+                }
+            }
+        }
+        
+        .information {
+            padding: 6.1rem 0 5.2rem 12rem;
+            // border: 1px solid red;
+
+            .brand {
+                text-transform: uppercase;
+                font-weight: 700;
+                color: var(--orange);
+                line-height: 1.05;
+            }
+
+            .title {
+                line-height: 1.1;
+                margin-top: 2rem;
+                font-size: 4.4rem;
+            }
+
+            .param {
+                color: var(--text-2);
+                line-height: 1.6;
+                margin-top: 3.3rem;
+                font-weight: 400;
+            }
+
+            .sale-price {
+                display: flex;
+                align-items: center;
+                margin-top: 2.5rem;
+                font-size: 3.1rem;
+                font-weight: 700;
+                color: var(--text-1);
+
+                .discount {
+                    color: var(--orange);
+                    background-color: var(--pale-orange);
+                    font-size: 1.6rem;
+                    margin-left: 1.2rem;
+                    padding: 0.3rem 1rem;
+                    border-radius: .5rem;
+                }
+            }
+
+            .full-price {
+                margin-top: .8rem;
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: var(--text-3);
+                text-decoration-line: line-through;
+            }
+
+            .bottom {
+                // border: 1px solid blue;
+                display: flex;
+                // align-items: center;
+                margin-top: 3.8rem;
+                gap: 4%;
+                width: 100%;
+
+                .quantity-bar {
+                    display: flex;
+                    align-items: center;
+                    background-color: var(--gray-bg);
+                    justify-content: space-between;
+                    border-radius: 1rem;
+                    // flex: 1 0 38%;
+                    width: 36%;
+                    padding: 1.5rem 1.4rem;
+                }
+
+                .add-cart {
+                    background-color: var(--orange);
+                    border-radius: 1rem;
+                    width: 63%;
+                    // flex: 1 0 58%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 1.8rem 1.4rem;
+                    align-items: center;
+                    gap: 1.2rem;
+
+                    p {
+                        color: var(--white);
+                        font-weight: 700;
+                    }
+
+                    img {
+                        height: 1.5rem;
+                        filter: brightness(3);
+                    }
+                }
+            }
+        }
+    }
+}
