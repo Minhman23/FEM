@@ -47,20 +47,52 @@ body {
   padding-left: 2.9rem;
 }
 .container header .left ul li {
+  position: relative;
   color: var(--text-2);
-  padding-left: 2.6rem;
+  margin-left: 2.6rem;
   display: inline-block;
+  cursor: pointer;
+}
+.container header .left ul li:after {
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: var(--orange);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  top: 6.6rem;
+}
+.container header .left ul li:hover:after {
+  width: 100%;
+  left: 0;
 }
 .container header .right {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .container header .right .avt {
   width: 5rem;
 }
+.container header .right .avt:hover {
+  cursor: pointer;
+  outline: 2px solid var(--orange);
+  border-radius: 50%;
+}
 .container header .right .cart {
-  padding-right: 4.6rem;
+  cursor: pointer;
+  margin-right: 4.6rem;
+}
+.container header .right .cart .cart-detail {
+  position: absolute;
+  left: 50%;
+  width: 50rem;
+  height: 40rem;
+  background-color: var(--white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .container .line {
   margin-top: 1rem;
@@ -81,6 +113,9 @@ body {
   width: 100%;
   border-radius: 1.5rem;
 }
+.container .wrapper .image .image-main:hover {
+  cursor: pointer;
+}
 .container .wrapper .image .image-sub {
   display: flex;
   gap: 3.2rem;
@@ -94,6 +129,9 @@ body {
   margin-top: 2.6rem;
   width: 8.8rem;
   border-radius: 1.2rem;
+}
+.container .wrapper .image .image-sub img:hover {
+  cursor: pointer;
 }
 .container .wrapper .information {
   padding: 6.1rem 0 5.2rem 12rem;
